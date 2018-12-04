@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ITCS 6160-CLOUD COMPUTING FOR DATA ANALYSIS</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.min.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <a class="menu-toggle rounded" href="#">
+      <i class="fas fa-bars"></i>
+    </a>
+    <nav id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+          <a class="js-scroll-trigger" ><B>Amazon Fine Food</B> </a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#Introduction">Introduction</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#Dataset">Dataset</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#Implementation">Implementation</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#Results">Results</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#Task-Division">Task Division</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead d-flex">
+      <div class="container text-center my-auto">
+        <h2 class="mb-1">MODELLING SENTIMENTAL ANALYSIS ON AMAZON FINE FOOD REVIEWS</h2>
+		<hr><p><b><h2>TEAM 9</h2></b>
+        <h3 class="mb-5">
+          <em><p>Khullar, Nikhil - 800964302<br/>Patel, Ayush - 800965912<br/>Rajagopalan, Sairam - 801018920<br/>Sharma, Harshal</p></em>
+        </h3>
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#Introduction"><em>Find Out More</em></a>
+      </div>
+      <div class="overlay"></div>
+    </header>
+
+    <!-- Introduction -->
+    <section class="content-section bg-light" id="Introduction">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+		   <div class="col-lg-12 text-left">
+                    <h2 class="section-heading text-center">Introduction</h2>
+            <h3><hr class="light">
+                    <p class= "faded"><em>The objective of this project is to predict the rating based on Amazon Fine Food Reviews.In a survey it was observed that, for 9 out of 10 customers, reviews are as important as personal recommendations.
+					Nowadays customers are likely to spend on a product only after reading positive reviews. Rating depicts the sentiment of the review and how strongly a user is recommending the product.
+					<p>Prediction of rating of a product based on reviews, helps a user to decide whether to buy the product or not just looking at ratings instead of reading all the reviews. Amazon Fine Food Review data set consists of about 568,454 food reviews Amazon users left upto October 2012.
+                    </em></p></h3>
+             </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dataset -->
+   <!-- <section class="content-section bg-primary text-white text-center" id="Dataset">
+      <div class="container">
+        <div class="content-section-heading">
+         <!-- <h2 class="text-secondary mb-0"><h2 class="section-heading text-center">Dataset</h2>
+          <h2 class="mb-5"></h2>
+		  <hr class="light">-->
+	<section class="content-section bg-primary text-white text-center" id="Dataset">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+		   <div class="col-lg-12 text-left">
+            <h2 class="text-secondary mb-0"><h2 class="section-heading text-center">Dataset</h2>
+			<h2 class= "mb-5"></h2>
+            <hr class="light">
+                    <h4><p class="faded"><em><b> We have used <a href="https://www.kaggle.com/snap/amazon-fine-food-reviews" style = "color: black;">  Amazon Fine Food Review data set</a> provided by Amazon on Kaggle. The data set consists of 568,454 food reviews Amazon users left up to October 2012.
+                    The data set is included in a single CSV file, Reviews.csv with attributes : Id, ProductId, UserId, ProfileName, HelpfulnessNumerator, HelpfulnessDenominator, Score, Time, Summary, Text.
+                    The algorithms implemented in the project use Score and Text attributes which represent Rating and Review respectively.
+                    The size of the data set is 251MB.
+                    </em></b></p>
+
+                   <!--  <a href="#Dataset" class="page-scroll btn btn-default btn-xl sr-button">Implementation</a> -->
+        </div>
+        </div>
+      </div>
+    </section>
+
+	<!-- Implementation -->
+    <section class="content-section bg-light" id="Implementation">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+		   <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Tasks and Approach</h2>
+            <h3><hr class="light">
+                    <p class= "faded"><em>The project uses classification approach to predict ratings and classify reviews. It includes implementation of two algorithms: K-Nearest Neighbors & Naive Bayes.
+                        The tasks involved are-<br/>- Pre-processing the data which includes removal of stop words, stemming, lemming, removal of all non-alphanumeric characters<br/>
+                        - Implementation of KNN and Naive Bayes algorithms from scratch in pyspark<br/>
+                        - Determining the accuracy of the algorithms for the data set<br/>- Implementation and Comparison of the accuracy with scikit-learn libraries for KNN and Naive Bayes<br/>
+                        - Taking review from user in console, and predicting the rating based on the model built</p>
+                    </em></p></h3>
+             </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="content-section bg-light" id="Algorithms">
+        <div class="container text-center">
+            <div class="row">
+			<div class="col-lg-10 mx-auto">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Algorithms</h2>
+                   <h3> <hr class="light">
+                    <p class="faded"><em>K-Nearest Neighbors and Naive Bayes Algorithms have been implemented in pyspark to classify reviews.</em></p>
+                </div>
+            </div>
+        </div>
+	</div>
+
+        <div class="container text-center">
+            <div class="row">
+			<div class="col-lg-10 mx-auto">
+                <div class="col-lg-12">
+                    <h3><hr class = "light"> Naive Bayes Algorithm</h3>
+                        <p class="faded"><em>Naive Bayes methods are a set of supervised learning algorithms based on applying 'Bayes' theorem with the 'naive' assumption of independence between every pair of features.
+                        In other words, Naive Bayes is a conditional probability model.
+                        It is an intuitive method that uses probabilities of each attribute belonging to each class to make a prediction. <br/>
+                        The multinomial Naive Bayes with smoothing has been implemented. To classify, we calculated probabilities of the review belonging to each rating and then selected the class value with highest probability.
+                        We have performed computations by summing logs of probabilities rather than multiplying probabilities for underflow prevention. <br/>
+                        Formula : </em><br/>
+                        <img src="img/NBFormula.png"></p>
+                </div>
+
+                <div class="col-lg-12">
+                    <h3>K-Nearest Neighbors Algorithm</h3>
+                        <p class="faded"><em>K-Nearest Neighbors algorithm is an instance-based algorithm and belongs to the family of competitive learning and lazy learning algorithms. For the prediction of rating, the algorithm searches through the training dataset for the k most similar instances.</br>
+                        Hamming distance and Levenshtien distance has been used to classify reviews.
+                       </em></p>
+                </div>
+            </div>
+        </div>
+	</div>
+    </section>
+
+
+    <!-- Results -->
+    <section id="Results">
+        <div class="container">
+            <div class="row">
+				<div class="col-lg-10 mx-auto">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Results</h2>
+                    <hr class="light">
+                </div>
+            </div>
+        </div>
+		</div>
+        <div class="container">
+            <div class="row">
+				<div class="col-lg-10 mx-auto">
+                <div class="col-lg-12">
+                    <h3>Naive Bayes Algorithm: Output</h3>
+                        <p class="faded">
+                        <table class="table table-bordered text-center">
+    						<thead>
+						      <tr>
+						        <th  class="col-xs-6 text-center">Value of alpha</th>
+						        <th  class="col-xs-6 text-center">Accuracy</th>
+						      </tr>
+						    </thead>
+						    <tbody>
+						      <tr>
+						        <td>2</td>
+						        <td>52.38%</td>
+						       </tr>
+						      <tr>
+						        <td>3</td>
+						        <td>52.78%</td>
+						       </tr>
+						       <tr>
+						        <td>4</td>
+						        <td>53.27%</td>
+						       </tr>
+						       <tr>
+						        <td>5</td>
+						        <td>53.46%</td>
+						       </tr>
+						    </tbody>
+						  </table>
+						   Accuracy with scikit-learn library - 64.32% <br/><br/>
+						   For user input:<br/><br/>
+						   <img src="img/NBUserInput.jpeg"/>
+						 </p>
+                </div>
+            </div>
+         </div>
+		 </div>
+         <div class="container">
+             <div class="row">
+			 <div class="col-lg-10 mx-auto">
+                <div class="col-lg-12">
+                    <h3>K-Nearest Neighbors Algorithm: Output</h3>
+                        <p class="faded">
+                        <table class="table table-bordered text-center">
+    						<thead>
+						      <tr>
+						        <th class="col-xs-6 text-center">Value of K</th>
+						        <th class="col-xs-6 text-center">Accuracy</th>
+						      </tr>
+						    </thead>
+						    <tbody>
+						      <tr>
+						        <td>25</td>
+						        <td>64.24%</td>
+						       </tr>
+						      <tr>
+						        <td>50</td>
+						        <td>71.39%</td>
+						         </tr>
+						    </tbody>
+						  </table>
+						  Accuracy with scikit-learn library - 78.6% for K = 50 <br/><br/>
+						  For user input:<br/><br/>
+						  <img src="img/KNNUserInput.jpeg"/>
+                       </p>
+                </div>
+            </div>
+        </div>
+	</div>
+    </section>
+</br>
+</br>
+</br>
+
+    <!-- Task Division -->
+    <section id="Task-Division">
+        <div class="container">
+            <div class="row">
+			<div class="col-lg-10 mx-auto"
+                <div class="col-lg-12 text-center">
+				<h2 class="section-heading text-center">Task Division</h2>
+                    <hr class="light">                 
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                   <p><b>Khullar, Nikhil</b><br/>
+					# Implemented the K-nearest neighbor algorithm<br/>
+					# Taking user review from console and predicting the rating based on the model built using KNN and Naive Bayes<br/><br/>
+                    <b>Patel, Ayush</b><br/>
+                    # Retrieving, Cleaning and preprocessing the data. For example, removing the stop word, non-alphanumeric characters, Stemming and lemming<br/>
+					# Implementation of Naive-Bayes algorithm with scikit-learn libraries and comparison of the accuracy<br/><br/>
+                    <b>Rajagopalan, Sairam</b><br/>
+                    # Implemented the prediction model using Naive Bayes algorithm<br/>
+                    # Implementation of KNN algorithm with scikit-learn libraries and comparison of the accuracy<br/>
+					# Calculating the accuracy of the fitted data<br/><br/>
+					<b>Sharma, Harshal</b><br/>
+                    # Implemented the prediction model using Naive Bayes algorithm<br/>
+                    # Implementation of KNN algorithm with scikit-learn libraries and comparison of the accuracy<br/>
+					# Calculating the accuracy of the fitted data<br/>
+					</p>
+            </div>
+        </div>
+    </section>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+
+
+
+    
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/stylish-portfolio.min.js"></script>
+
+  </body>
+
+</html>
